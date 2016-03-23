@@ -1,0 +1,69 @@
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.content-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.content-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.search-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 20px;
+}
+
+.home-search-box {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.home-search-box .btn-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .content-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .search-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .search-container {
+    width: 700px;
+  }
+}

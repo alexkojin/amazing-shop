@@ -1,0 +1,14 @@
+<div class="content-wrapper">
+  <div class="content-wrapper-inner">
+    <div class="search-container">
+      <div class="inner">
+        <div class="home-search-box">
+          <form (ngSubmit)="searchSubmit()">
+            <input type="text" class="form-control" placeholder="Search" name="query" [(ngModel)]="model.query">
+            <button type="submit" class="btn btn-primary btn-search">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
