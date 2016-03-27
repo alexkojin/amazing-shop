@@ -1,13 +1,20 @@
 import {Component} from 'angular2/core';
+import {HTTP_PROVIDERS} from 'angular2/http';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 import {HomeComponent} from './components/home/home.component';
 import {ProductsComponent} from './components/products/products.component';
 
+import {ProductService} from './service/product.service';
+
 @Component({
   selector: 'store-app',
   template: '<router-outlet></router-outlet>',
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES],
+  providers: [
+    HTTP_PROVIDERS,
+    ProductService
+  ]
 })
 
 @RouteConfig([

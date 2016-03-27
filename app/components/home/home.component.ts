@@ -16,6 +16,6 @@ export class HomeComponent {
   constructor(private _router: Router) { }
 
   searchSubmit() {
-    this._router.navigate(['Products', {query: this.model.query} ]);
+    this._router.navigate(['Products', {query: this.model.query}]);
   }
 }
