@@ -1,4 +1,3 @@
 export class Product {
-  constructor(title: string, price: string, image: string){};
-
+  constructor(id: string, title: string, price: string, image: string){};
 }

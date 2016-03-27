@@ -1,5 +1,5 @@
 import {Component, OnInit} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
+import {ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
 
 import {SearchQuery} from '../../models/search-query';
 import {Product} from '../../models/product';
@@ -11,7 +11,7 @@ import {SearchFormComponent} from '../../components/search-form/search-form.comp
   selector: "store-products",
   templateUrl: './app/components/products/products.component.html',
   styleUrls: ['./app/components/products/products.component.css'],
-  directives: [SearchFormComponent]
+  directives: [ROUTER_DIRECTIVES, SearchFormComponent]
 })
 
 export class ProductsComponent implements OnInit {
