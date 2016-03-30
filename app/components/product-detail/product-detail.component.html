@@ -8,7 +8,12 @@
 
     <div class="col-md-6">
       <h2>{{ product.title }}</h2>
+      <div *ngIf="product.brand">{{ product.brand }}</div>
       <span>{{ product.price }}</span>
+
+      <ul *ngIf="product.features">
+        <li *ngFor="#feature of product.features">{{ feature }}</li>
+      </ul>
     </div>
   </div>
 </div>
