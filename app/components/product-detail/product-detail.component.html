@@ -3,7 +3,12 @@
 <div class="container">
   <div class="row" *ngIf="product">
     <div class="col-md-6">
-      <img src="{{product.image}}" >
+      <img src="{{ product.image }}" >
+      <div>
+        <span *ngFor="#image of product.image_sets">
+          <img src="{{ image }}" >
+        </span>
+      </div>
     </div>
 
     <div class="col-md-6">
