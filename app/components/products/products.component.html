@@ -5,11 +5,11 @@
     <div class="col-md-12">
 
       <div class="product-list">
-        <div *ngFor="#product of products">
+        <div class="product" *ngFor="#product of products">
+          <img src="{{ product.image }}" />
           <h4>
             <a [routerLink]="['ProductDetail', {id: product.id}]">{{ product.title }}</a>
           </h4>
-          <img src="{{ product.image }}" />
           <span>{{ product.price }}</span>
         </div>
       </div>

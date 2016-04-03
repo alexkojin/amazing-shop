@@ -1,0 +1,6 @@
+<img src="{{ selectedImage['large'] }}" >
+<div>
+  <span *ngFor="#image of product.imageSets">
+    <img src="{{ image['thumb'] }}" (click)="selectImage(image)" >
+  </span>
+</div>

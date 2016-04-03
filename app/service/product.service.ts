@@ -25,7 +25,7 @@ export class ProductService {
   detail(id: string) {
     let url = this._detailUrl + id + '.json';
     return this._http.get(url)
-                     .map(res => res.json())
+                     .map(res => <Product> res.json())
                      .catch(this.handleError);
   }
 
