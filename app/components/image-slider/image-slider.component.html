@@ -1,6 +1,37 @@
-<img src="{{ selectedImage['large'] }}" >
+<!-- <img src="{{ selectedImage['large'] }}" >
 <div>
   <span *ngFor="#image of product.imageSets">
     <img src="{{ image['thumb'] }}" (click)="selectImage(image)" >
   </span>
+</div> -->
+
+
+<!-- Images Carousel -->
+<div class="game-carousel">
+  <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner" role="list-box">
+        <div class="item" *ngFor="#image of product.imageSets; #index = index" [ngClass]="{active: index == 0 }">
+          <img src="{{ image['large'] }}">
+        </div>
+    </div>
+  </div>
+
+  <!-- Thumbs Carousel -->
+  <div class="clearfix">
+    <div id="thumbcarousel" class="carousel slide" data-interval="false">
+      <div class="carousel-inner">
+          <div class="item active">
+            <div class="thumb" data-target="#carousel"  *ngFor="#image of product.imageSets; #index = index" attr.data-slide-to="{{ index }}">
+              <img src="{{ image['thumb'] }}">
+            </div>
+          </div>
+      </div>
+      <!-- <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a> -->
+    </div>
+  </div>
 </div>
